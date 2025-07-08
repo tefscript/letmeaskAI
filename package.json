@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --env-file .env --experimental-strip-types src/server.ts",
-    "dev": "node --env-file .env --experimental-strip-types --watch src/server.ts",
-    "db:seed": "node --env-file .env --experimental-strip-types --watch src/seed.ts"
+    "start": "tsx --env-file .env src/server.ts",
+    "dev": "tsx --env-file .env --watch src/server.ts",
+    "db:seed": "tsx --env-file .env --watch src/seed.ts"
   },
   "keywords": [],
   "author": "",

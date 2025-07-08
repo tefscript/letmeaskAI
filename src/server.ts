@@ -1,5 +1,5 @@
-import {fastify} from 'fastify';
-import {serializerCompiler, validatorCompiler, type ZodTypeProvider} from 'fastify-type-provider-zod';
+import fastify from 'fastify';
+import { serializerCompiler, validatorCompiler, type ZodTypeProvider } from 'fastify-type-provider-zod';
 import { fastifyCors } from '@fastify/cors';
 import { getRoomsRoute } from './http/routes/get-rooms.ts';
 
