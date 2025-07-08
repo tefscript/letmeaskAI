@@ -2,8 +2,11 @@
   "name": "nlw-agents",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --env-file .env --experimental-strip-types src/server.ts",
+    "dev": "node --env-file .env --experimental-strip-types --watch src/server.ts",
+    "db:seed": "node --env-file .env --experimental-strip-types --watch src/seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +15,16 @@
   "devDependencies": {
     "@types/node": "^24.0.10",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-orm": "^0.44.2",
+    "drizzle-seed": "^0.3.1",
+    "fastify": "^5.4.0",
+    "fastify-type-provider-zod": "^5.0.1",
+    "postgres": "^3.4.7",
+    "tsx": "^4.20.3",
+    "zod": "^3.25.75"
   }
 }
